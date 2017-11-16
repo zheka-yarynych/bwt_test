@@ -1,1 +1,1 @@
-# It is web-site for BWT Group
+# It is web-site for BWT Group.
