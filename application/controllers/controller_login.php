@@ -8,6 +8,8 @@ class Controller_Login extends Controller
 
 	public function action_index()
 	{
+		User_Data::only('quest');
+
 		if(isset($_POST['email']) && isset($_POST['password'])){
 			$query = DB::$pdo->prepare("SELECT id, password FROM users WHERE email = ? LIMIT 1");
 			$query->execute([$_POST['email']]);

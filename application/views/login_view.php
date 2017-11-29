@@ -9,3 +9,6 @@
 	<br>
 	<button type="submit" class="btn btn-default">Войти</button>
 </form>
+Не зарегистрированы?
+<br>
+>> <a href="/register">Регистрация</a>

@@ -8,6 +8,7 @@ class Controller_Main extends Controller
 
 	function action_index()
 	{	
+		User_Data::only('user');
 		$data = $this->model->get_data();
 		$this->view->generate('main_view.php', 'template_view.php', $data);
 	}
