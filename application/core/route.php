@@ -54,6 +54,8 @@ class Route
 		
 		if(method_exists($controller, $action))
 		{
+			if(!User_Data::exists_user($_COOKIE['id']) && ($_SERVER['REQUEST_URI'] != '/login' && $_SERVER['REQUEST_URI'] != '/register'))
+				header('location: /login');
 			//Вызываем действие контроллера
 			$controller->$action();
 		}
